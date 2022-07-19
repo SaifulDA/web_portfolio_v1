@@ -3,6 +3,7 @@ body {
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .jumbotron {
   padding: 100px;
