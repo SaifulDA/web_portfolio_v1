@@ -22,6 +22,7 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
   font-family: "baloo tamma";
+  position: relative;
 }
 .title-name p {
   color: #fff;
