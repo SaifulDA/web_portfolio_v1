@@ -1,0 +1,98 @@
+body {
+  background-image: url(img/bgbody.jpg);
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.jumbotron {
+  padding: 100px;
+  background-color: rgba(132, 0, 255, 0.13);
+}
+
+#iden-name {
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: "audiowide";
+}
+.subtitle1,
+.subtitle2 {
+  text-shadow: 0px 25px 3px #ede4e9;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: "baloo tamma";
+}
+.title-name p {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 7px;
+}
+.subtitle1,
+.subtitle2 {
+  letter-spacing: 0px;
+  text-transform: none;
+  opacity: 0.8;
+  font-weight: 100;
+}
+.subtitle1 {
+  animation: subtitle1;
+}
+.subtitle2 {
+  animation: subtitle2;
+}
+
+.subtitle1,
+.subtitle2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 15s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.subtitle1::after,
+.subtitle2::after {
+  content: " | ";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 0.8s;
+  animation-timing-function: steps(20, end);
+}
+
+@keyframes subtitle2 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+
+  60%,
+  90% {
+    width: 12em;
+  }
+}
+
+@keyframes subtitle1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10%,
+  40% {
+    width: 11em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
