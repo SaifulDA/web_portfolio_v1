@@ -6,7 +6,7 @@ body {
   background-position: center;
 }
 .jumbotron {
-  padding: 100px;
+  padding: 50px;
   background-color: rgba(132, 0, 255, 0.13);
 }
 .subtitle1,
@@ -91,4 +91,12 @@ body {
   50% {
     opacity: 1;
   }
+}
+
+h2{
+  font-family: Playon-reg;
+  font-size: 50px;;
+}
+p{
+  font-family: 'Times New Roman', Times, serif;
 }
