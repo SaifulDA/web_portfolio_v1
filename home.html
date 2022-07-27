@@ -221,7 +221,7 @@
                   Contact me by Linkedin</p>
               </div>
               <div class="card-footer text-center">
-                <a class="btn btn-outline-primary text-light " href="https://github.com/SaifulDA" role="button">Contact Now</a>
+                <a class="btn btn-outline-primary text-light " href="https://www.linkedin.com/in/saifuddaulah-alfarabi-81b04420b/" role="button">Contact Now</a>
               </div>
             </div>
           </div>
@@ -242,6 +242,35 @@
       </div>
     </section>
     <br>
+    <section>
+      <div class="container text-light">
+        <h2 style="text-align: center;">Message</h2>
+        <form name="submit-pesan">
+          <div class="alert alert-primary alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Thank You !</strong> we have received your message.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control text-light" placeholder="Input Email Address" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" style="background-color:rgba(255, 0, 212, 0.103);">
+          </div> 
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Full Name</label>
+            <input type="text" class="form-control text-light" placeholder="Input Full Name" id="exampleInputNme" name="nama" style="background-color:rgba(255, 0, 212, 0.103);">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control text-light"  placeholder="Input Message" id="exampleFormControlTextarea1" rows="3" name="pesan" style="background-color:rgba(255, 0, 212, 0.103);"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-kirim" style="background-color:rgba(128, 0, 128, 0.301);">Submit</button>
+          <button class="btn btn-primary btn-loading d-none" type="button" style="background-color:rgba(128, 0, 128, 0.301);" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </form>
+      </div>
+    </section>
+    <br>
     <!--Fotter-->
     <footer class="text-center text-lg-start text-light" style="background-color: rgba(138, 0, 119, 0.247)">
       <!-- Copyright -->
@@ -251,5 +280,26 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwU28-js1UoyC0gDV16bgVkZOyRG1L2JtDrIeS3O9U625OIdX35elMI4C5z3rBYeKjz/exec';
+      const form = document.forms['submit-pesan'];
+      const btnKirim = document.querySelector('.btn-kirim')
+    const btnLoading = document.querySelector('.btn-loading')
+    const myAlert = document.querySelector('.my-alert')
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            myAlert.classList.toggle('d-none')
+            form.reset(); 
+            console.log('Success!', response);
+          })
+          .catch(error => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>
