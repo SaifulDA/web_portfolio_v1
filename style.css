@@ -1,10 +1,5 @@
 body {
-  background-image: url(img/body.jpg);
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center;
-  
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
 }
 .jumbotron {
   padding: 50px;
