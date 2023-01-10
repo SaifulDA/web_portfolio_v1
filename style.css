@@ -98,5 +98,6 @@ p{
 }
 
 a:hover {
+  background-color: blueviolet;
   text-decoration-color: #44107A;
 }
