@@ -96,3 +96,7 @@ h2{
 p{
   font-family: 'Times New Roman', Times, serif;
 }
+
+a:hover {
+  background-color: gold;
+}
