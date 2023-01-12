@@ -101,3 +101,28 @@ a:hover {
   background-color: blueviolet;
   text-decoration-color: #44107A;
 }
+
+.mb-3 {
+  background-color: #212121;
+  max-width: 190px;
+  height: 40px;
+  padding: 10px;
+  /* text-align: center; */
+  border: 2px solid white;
+  border-radius: 5px;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
+
+.mb-3:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  -webkit-box-shadow: -3px -3px 15px rgb(0, 255, 255);
+          box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  -webkit-transition: .1s;
+  transition: .1s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
