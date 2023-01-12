@@ -96,7 +96,6 @@ h2{
 p{
   font-family: 'Times New Roman', Times, serif;
 }
-
 .nav-item {
   padding: 0;
   margin: 0;
@@ -114,7 +113,6 @@ p{
   gap: 0.5rem;
   align-items: center;
 }
-
 .nav-item::after {
   position: absolute;
   content: "";
@@ -126,10 +124,6 @@ p{
   transition: 0.3s ease-out;
 
 }
-
 .nav-item:hover::after {
   width: 100%;
- 
 }
-=======
->>>>>>> 13d1dd37ab02093f57bcb766ed8c4f9d6f498af9
