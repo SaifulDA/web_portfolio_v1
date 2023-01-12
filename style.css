@@ -121,7 +121,8 @@ p{
   background: var(--hovered-color);
   height: 2px;
   transition: 0.3s ease-out;
-
+  color: var(--hovered-color);
+  background-color: #ff0000;
 }
 .nav-item:hover::after {
   width: 100%;
