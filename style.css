@@ -96,15 +96,9 @@ h2{
 p{
   font-family: 'Times New Roman', Times, serif;
 }
-.nav-item {
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-}
 
 .nav-item {
-  --primary-color: #111;
+  --primary-color: rgb(172, 1, 252);
   --hovered-color: #ff0000;
   position: relative;
   display: flex;
@@ -122,8 +116,79 @@ p{
   height: 2px;
   transition: 0.3s ease-out;
   color: var(--hovered-color);
-  background-color: #ff0000;
 }
 .nav-item:hover::after {
   width: 100%;
+}
+.nav-item:hover {
+  background-color: #9900ff;
+  border-radius: 6px;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+}
+.navbar-brand {
+  --hovered-color: #ff0000;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  gap: 0.5rem;
+  align-items: center;
+}
+.navbar-brand::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+  color: var(--hovered-color);
+}
+.navbar-brand:hover {
+  background-color:#9900ff;
+  border-radius: 6px;
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+ }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.card {
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  
+ 
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-navbtn {
+  height: 30px;
+  width: 30px;
+}
+.card{
+  background-color: rgba(107, 0, 107, 0.274);
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
