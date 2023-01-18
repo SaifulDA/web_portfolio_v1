@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
 />
 
   </head>
@@ -206,8 +206,6 @@
       </div>
       <br>
       <br>
-      <div class="swiper-button-next swiper-navbtn"></div>
-      <div class="swiper-button-prev swiper-navbtn"></div>
       <div class="swiper-pagination"></div>
       </div>
       </div>
@@ -333,7 +331,7 @@
       </div>
       <!-- Copyright -->
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -362,15 +360,17 @@
     </script>
     <script>
     var swiper = new Swiper(".mySwiper", {
-      cssMode: true,
       slidesPerView: 3,
       spaceBetween: 20,
       slidesPerGroup: 3,
       loop: true,
       grabCursor: true,
       centerSlides: true,
+      mousewheel: true,
+      keyboard:true,
       pagination: {
           el: ".swiper-pagination",
+          dynamicBullets: true,
         },
         navigation: {
           nextEl: ".swiper-button-next",
